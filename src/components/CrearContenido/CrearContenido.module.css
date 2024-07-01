@@ -1,0 +1,81 @@
+.inico_input_contenido{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.modulo_input{
+    display: flex;
+    padding: 10px 0px;
+
+}
+
+.modulo_selector{
+
+}
+
+.modulo_tablas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 30px 0px;
+
+}
+
+.boton_crear{
+}
+
+.boton_crear button{
+    color: rgb(34,34,34);
+    font-weight: 500;
+    text-align: left;
+    text-decoration: none;
+    /* background-color: brown; */
+    /* border-radius: 10px;
+    border: 0.1px solid rgb(2, 198, 165);
+    padding: 15px 15px 15px 15px; */
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 5px 5px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px
+    
+}
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+    
+}
+.boton_crear button::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        red,blue,deeppink,rgb(0, 255, 38),
+          red,blue,deeppink,rgb(0, 255, 34)
+    );
+    background-size: 10%;
+    border-radius: 10px;
+    filter: blur(2px);
+    animation: glowing 20s linear infinite;
+} 

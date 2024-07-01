@@ -1,0 +1,9 @@
+.nav-link {
+  color: white;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none;  
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
