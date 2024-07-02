@@ -1,17 +1,15 @@
-// Importar AppRouter desde './AppRouter' para definir las rutas de la aplicación
-import { AppRouter } from './AppRouter';
-import { CarullaProvider } from './context/CarullaProvider';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import BusquedaVuelos from './pages/BusquedaVuelos';
+/* import VuelosPage from './pages/VuelosPage'; */
 
-// Componente principal de la aplicación
-function App() {
-    return (
-        // Proveer el contexto de Pokémon a la aplicación
-        <CarullaProvider>
-            {/* Utilizar el enrutador principal de la aplicación */}
-            <AppRouter />
-        </CarullaProvider>
-    );
-}
 
-// Exportar el componente principal de la aplicación
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<BusquedaVuelos />} />
+      {/* <Route path="/resultados" element={<VuelosPage />} /> */}
+    </Routes>
+  </BrowserRouter>
+);
+
 export default App;
