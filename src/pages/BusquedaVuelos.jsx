@@ -1,7 +1,4 @@
-// BusquedaVuelos.jsx
-
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 
 const BusquedaVuelos = () => {
@@ -61,14 +58,17 @@ const BusquedaVuelos = () => {
         if (resultados === null) {
             return <p>Realiza una búsqueda para ver los resultados.</p>;
         } else if (resultados.length === 0) {
-            return <p>No se encontraron vuelos para los criterios seleccionados.</p>;
+            return <p>Es nesesario que rellene todos los campos o el campo de destino tiene que ser diferente al de llegada.</p>;
         } else {
             return (
                 <div>
                     <h2>Resultados</h2>
+                    <label htmlFor="">Precio total del vuelo en pesos:</label>
                     <p>{resultados[1]}</p> {/* Precio total */}
+                    <label htmlFor="">Tiempo total del vuelo horas:</label>
                     <p>{resultados[2]}</p> {/* Tiempo total */}
                     <ul>
+                    <label htmlFor="">Detalles del vuelo:</label>
                         {resultados[0].map((vuelo, index) => (
                             <li key={index}>
                                 Vuelo de {vuelo.origen} a {vuelo.destino}, Precio: {vuelo.precio}, Duración: {vuelo.duracion} horas, Salida: {vuelo.hora_salida}
